@@ -47,7 +47,7 @@ public class PacienteController {
 		return pacienteService.consultarPaciente(id);
 	}
 
-	@PutMapping("editarPaciente")
+	@PutMapping("/editarPaciente")
 	public ResponseEntity<?> editarPaciente(@RequestBody Paciente paciente) {
 		return pacienteService.editarPaciente(paciente);
 
