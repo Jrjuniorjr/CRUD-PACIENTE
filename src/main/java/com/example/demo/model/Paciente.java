@@ -12,31 +12,20 @@ import javax.persistence.Table;
 @Table(name="tb_paciente")
 public class Paciente implements Serializable{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	@Id 
-	@GeneratedValue(strategy = GenerationType.AUTO)	
-	private Integer id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
+	private int id;
 	private String nome;
 	private String email;
 	
 	public Paciente() {
 		super();
 	}
-
-	public Paciente(Integer id, String nome, String email) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.email = email;
-	}
 	
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNome() {

@@ -36,7 +36,7 @@ public class PacienteService {
 	
 	}
 	
-	public ResponseEntity<?> consultarPaciente(Integer id) {
+	public ResponseEntity<?> consultarPaciente(int id) {
 
 		return ResponseEntity.ok(pacienteRepository.findById(id));
 
@@ -53,7 +53,7 @@ public class PacienteService {
 		return ResponseEntity.ok(pacienteRepository.save(paciente));
 	}
 
-	public ResponseEntity<?> removerPaciente(Integer id) {
+	public ResponseEntity<?> removerPaciente(int id) {
 		Paciente pacienteExist = pacienteRepository.findById(id).orElse(null);
 
 		if (pacienteExist == null) {
